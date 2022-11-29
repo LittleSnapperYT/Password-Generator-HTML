@@ -5,42 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Password Generator</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-        #text {
-            font-family: 'Open Sans', sans-serif;
-            font-size: xx-large;
-        }
-        #subtext {
-            font-family: 'Open Sans', sans-serif;
-            font-size: large;
-        }
-        #password {
-            font-family: 'Varela Round', sans-serif;
-            font-size: x-large; 
-            font-weight: bolder;
-        }
-        #back {
-            margin: auto;
-            width: 50%;
-            border: 3px solid white;
-            padding: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./gen.js"></script>
   </head>
-  <script>
-    function generate() {
-        passwordText = document.getElementById("password");
-        var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        var passwordLength = 12;
-        var password = "";
-        for (var i = 0; i <= passwordLength; i++) {
-        var randomNumber = Math.floor(Math.random() * chars.length);
-        password += chars.substring(randomNumber, randomNumber +1);
-        passwordText.innerHTML = password; }
-    }
-  </script>
   <body id="back" onload=generate()>
   <section class="section" id="back">
     <div class="container" style="zoom: 2;">
